@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edged"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ronit Thapa personal portfolio</title>
+<link rel="stylesheet" href="style1.css">
+
+</head>
+<body>
+    <div id="header"> 
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="#">portfolio.</a></div>
+            <ul>
+                   <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                   <li><a href="#">Services</a></li>
+                    <li><a href="#">Projets</a></li>
+                    <li><a href="#">Contact</a></li>
+                </li>
+            </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Designer and Cloud Architect</p>
+                <h1>Hi,I am <span>Ronit</span> Thapa <br>from India</h1>
+            </div>
+        </div>
+
+    </div>
+    
+    <!---------------------------------About------------------------------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/photo.png">
+                
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>I am a front end web developer and a Beginner cloud Architect. i have a good knowledge in Web Designing ,Cloud realted services and programing language, such as HTML,CSS,LINUX,Shell programing,Python,AWS.
+                     currently I am pursuing BCA(Bachelors Of Computer Application) from Inspiria Knowledge Campus. </p>
+                     <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links"onclick="opentab('Education')">Education</p>
+                     </div>
+                     <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>UI</span><br>Web Designing</li>
+                            <li><span>Cloud Computing</span><br>LINUX OS,AWS</li>
+                            <li><span>Programming Languages</span><br>Python,c</li>
+                        </ul>
+                        </div>
+                        <div class="tab-contents" id="Education">
+                            <ul>
+                                <li><span>Higher Secondary</span><br>Army Public School Sukna</li>
+                                <li><span>Graduatikon</span><br>Inspiria Knowledge Campus</li>                       
+                            </ul>
+                         </div>
+                       </div>
+                </div>   
+        </div>
+     </div>
+    
+<script>
+
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+    
+    for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+</body>
+</html>
